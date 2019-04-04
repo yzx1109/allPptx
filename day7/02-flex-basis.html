@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style >
+		/*
+			
+			flex-basis: 
+				给项目设置的固定空间 
+				默认值是auto,也就是项目本身的大小
+				(1).当项目的总空间不超过容器的空间,这是flex-basis相当于width属性,表示该项目占据的固定空间
+				(2).如果超出了容器的空间,需要计算,也就是每个项目都会按比例缩小
+					
+
+				
+		*/
+		.box {
+			display: flex;
+			width: 600px;
+			height: 300px;
+			margin: 100px auto 0;
+			background: #00f;
+		}
+		.box > div {
+			width: 300px;
+			height: 200px;
+		}
+		.box > div:nth-of-type(1) {
+			flex-basis: 100px;
+			background: #f00;
+		}
+		.box > div:nth-of-type(2) {
+			background: #0f0;
+		}
+		.box > div:nth-of-type(3) {
+			background: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+</body>
+</html>

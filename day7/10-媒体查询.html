@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		/*
+			需求:
+				1.当屏幕尺寸大于1200px 显示红色背景 min-width:1200px;
+				2.当屏幕尺寸小于1200px并且大于992px时,否则显示绿色背景
+				min-width: 992px;
+				3.当屏幕尺寸小于992px并且大于768px时,否则显示蓝色背景
+				min-width:768px;
+				4.否则显示灰色背景
+				max-width:768px;
+			
+				注意:
+					条件的书写顺序
+					先小尺寸再大尺寸
+
+			
+		*/
+		.box {
+			height:100px;
+			background: #aaa;
+		}
+		@media (min-width: 768px) {
+			.box {
+				background: #00f;
+			}
+		}
+		@media (min-width: 992px) {
+			.box {
+				background: #0f0;
+			}
+		}
+		@media (min-width: 1200px) { 
+			.box {
+				background: #f00;
+			}
+		}
+		/*
+			Bootstrap框架
+				响应式开发,移动设备优先
+
+
+		*/
+	</style>
+</head>
+<body>
+	<div class="box" id='box'>
+		
+	</div>
+</body>
+</html>

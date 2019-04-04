@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>媒体查询</title>
+	<style>
+		/*	
+			媒体查询:
+				media query
+
+				用途:
+					做响应式页面开发
+					响应式:
+						在不同的屏幕尺寸下,
+						显示不同的页面排版
+
+				目的:	
+					适合小型项目,对一些初创期的企业适用,
+					开发一套产品,可以在不同的设备上运行,
+					大项目一定不可以,否则就废了
+
+					大项目开发两套
+						两个团队分别开发
+							PC端
+							移动端
+				原理:
+					在不同的屏幕尺寸下,应用不同的样式
+
+
+				优点:
+					1.用户体验好
+					2.网页排钟始终整齐,可以让用户看清网页端全貌
+				
+				缺点:
+					1.代码极其冗余、臃肿、重复
+					2.不利于维护
+
+			
+			需求:
+					1.当屏幕尺寸大于1200px 显示红色背景
+					2.当屏幕尺寸小于1200px并且大于992px时,否则显示绿色背景
+					3.当屏幕尺寸小于992px并且大于768px时,否则显示蓝色背景
+					4.否则显示灰色背景
+
+		*/
+		/*
+			min-width  最小宽
+			max-width  最大宽 
+		*/
+		/* >= 992px */
+		.wrap {
+			height: 100px;
+		}
+		@media only screen and (min-width:992px) and(max-width:1200px) {
+			/* 写你要的样式 */
+			.wrap {
+				background: #f00;
+			}
+		}
+		@media only screen and (max-width:991px) {
+			/* 写你要的样式 */
+			.wrap {
+				background: #0f0;
+			}
+		}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		
+	</div>
+</body>
+</html>

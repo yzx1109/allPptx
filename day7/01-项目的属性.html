@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style >
+		/*
+			order 规定项目排列顺序,order值越大,越靠后显示,默认值是零,可以为负值
+			flex-grow  规定项目的放大比例,
+				(1).默认值是零,如果容器有剩余空间,那么项目不会放大
+				(2).如果flex-grow是1,那么项目会平均分配容器的空间,这是项目自身的width属性将无效了
+				(3).如果有一个项目的flex-grow是2,其他的都是1,那么flex-grow是2的这个项目的空间将是其他项目两倍
+
+			flex-shrink
+				规定项目的缩小比例,
+				前提是项目的总空间大于容器的空间,此属性才会生效
+				默认值是1,如果项目的总空间大于容器的空间,那么项目将会等比例缩小
+				
+				当flex-shrink是零,则项目不缩小,按照你设置的尺寸显示,其它的项目等比例缩小
+			flex-basis
+
+			flex
+
+			align-self
+		*/
+		.box {
+			display: flex;
+			width: 600px;
+			height: 300px;
+			margin: 100px auto 0;
+			background: #00f;
+		}
+		.box > div {
+			width: 300px;
+			height: 200px;
+		}
+		.box > div:nth-of-type(1) {
+			flex-shrink: 1;
+			background: #f00;
+		}
+		.box > div:nth-of-type(2) {
+			flex-shrink: 2;
+			background: #0f0;
+		}
+		.box > div:nth-of-type(3) {
+			flex-shrink: 3;
+			background: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+</body>
+</html>

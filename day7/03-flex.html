@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.wrap {
+			display: flex;
+			width: 700px;
+			height: 400px;
+			margin: 100px auto 0;
+			background: pink;
+		}
+		.wrap div {
+			flex: 1;
+			border: 5px solid #f00;
+		}
+		/*
+			flex
+				是
+				flex-grow
+				flex-shrink
+				flex-basis
+				三个的复合属性
+
+				当你想给项目添加flex的样式,首选复合属性,因为浏览器会这个复合属性推算其他的属性,这样的效率更高
+
+				flex:flex-grow flex-shrink(默认值是1) flex-basis(默认值是auto);
+				在实际开发中,我们更多是将平分容器的空间,那么这个时候我们只需要给项目添加flex:1的属性即可,也就是将flex-grow的值设置为1,其他两个属性无需设置了,因为它俩有默认值
+		
+
+		*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

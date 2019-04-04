@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>align-self</title>
+	<style>
+		.wrap {
+			display: flex;
+			width: 500px;
+			height: 200px;
+			margin: 100px auto 0;
+			background: #f0f;
+		}
+		.wrap div {
+			width: 100px;
+			height: 100px;
+			border: 2px solid #00f;
+		}
+		
+		/*
+			align-self:
+				相当于align-items属性
+				默认值是auto,也就是继承了
+				容器的align-items的属性值
+
+				用来分别设置项目在交叉轴山的对齐方式
+				flex-start
+				flex-end
+				center
+				stretch
+				baseline
+
+		*/
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

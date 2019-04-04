@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		/*
+			
+			怪异盒子	
+				box-sizing
+					border-box   怪异盒子
+						往里挤
+					content-box   默认值
+						往外扩
+				  
+			普通盒子:
+				padding border 会把盒子撑大
+				撑大之后的盒子宽高如何计算:
+					宽 = 原来内容宽 + 左右padding + 左右border 
+						400 + 20 * 2 + 5 * 2 = 450px
+
+					高 = 原来内容高 + 上下padding + 上下border 
+						300 + 20 * 2 + 5 * 2 = 350px
+
+
+
+
+			媒体查询
+
+		*/
+		.wrap {
+			box-sizing: border-box;
+			width: 400px;
+			height: 300px;
+			padding: 20px;
+			border: 5px solid #000;
+			background: #f00; 
+		}
+
+		ul {
+			height: 100px;
+			background: #999;
+		}
+
+		ul li {
+			box-sizing: border-box;
+			float: left;
+			width: 25%;/* 总宽度 如果有padding和border,在总宽的基础上减去padding和border占宽*/
+			height: 100%;
+			border:2px solid #000;
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+
+	</div>
+	<ul>
+		<li style='background: #f00;'></li>
+		<li style='background: orange;'></li>
+		<li style='background: #0f0;'></li>
+		<li style='background: #f0f;'></li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
